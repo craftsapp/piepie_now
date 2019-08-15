@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "MyFeed-v${variant.versionName}.apk"
+        }
+    }
+
+    defaultConfig {
+        applicationId "me.craftsapp.pielauncher.myfeed"
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        versionCode 100001
+        versionName "0.5.1"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "com.android.support:support-v4:28.0.0"
+    implementation('com.googlecode.json-simple:json-simple:1.1.1') {
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
+    implementation project(':lib_launcher_client')
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
