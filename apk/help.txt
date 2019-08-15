@@ -1,0 +1,11 @@
+PiePie Google Companion
+PiePie Launcher supports integrating the Google Now page into the desktop, like Pixel Launcher and Google Now Launcher, through the help of the PiePie Google Companion APK. Unfortunately the API from Google is restricted to just preinstalled (system) apps, such as the launcher that came with your device. Third party apps can only use it through a workaround of manually installing a "debuggable" APK outside of the Play Store.
+
+To enable Google Now in PiePie Launcher
+
+Download and install the PiePie Now APK
+Ensure you are using PiePie Launcher 1.2.0 or higher
+Go to PiePie Launcher Settings > Behavior > Google Now and enable the page
+Note that if you are using infinite scroll, you will only be able to enable Google via "Edge swipe"
+
+Download PiePie Now Apk: wwww.apk.aa
